@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Enter Your Tech Profile</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <!-- Education -->
+        <label>Education</label>
+        <select name="education">
+            <option value="10+2">10+2</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Post Graduate">Post Graduate</option>
+        </select>
+
+        <!-- Programming Languages -->
+        <label>Primary Programming Language</label>
+        <select name="programming_language">
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Go">Go</option>
+        </select>
+
+        <!-- Tech Skills -->
+        <label>Technical Skills</label>
+        <select name="skills">
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="DevOps">DevOps</option>
+        </select>
+
+        <!-- Interests -->
+        <label>Tech Interests</label>
+        <select name="interests">
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Mobile App Development">Mobile App Development</option>
+            <option value="Blockchain">Blockchain</option>
+            <option value="AR/VR">AR/VR</option>
+            <option value="Robotics">Robotics</option>
+        </select>
+
+        <!-- Time Commitment -->
+        <label>Time Commitment (hrs/week)</label>
+        <select name="time_commitment">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40+">40+</option>
+        </select>
+
+        <!-- Experience Level -->
+        <label>Experience Level</label>
+        <select name="experience">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+
+        <!-- Preferred Tech Industry -->
+        <label>Preferred Tech Industry</label>
+        <select name="industry">
+            <option value="IT Services">IT Services</option>
+            <option value="Software Product Development">Software Product Development</option>
+            <option value="FinTech">FinTech</option>
+            <option value="HealthTech">HealthTech</option>
+            <option value="EdTech">EdTech</option>
+        </select>
+
+        <!-- Past Knowledge -->
+        <label>Past Knowledge / Experience</label>
+        <textarea name="past_knowledge" rows="4" placeholder="Describe your past technical projects, internships, or experience"></textarea>
+
+        <!-- Career Goal -->
+        <label>Career Goal</label>
+        <textarea name="career_goal" rows="3" placeholder="e.g. Become a Data Scientist, Full Stack Developer, Cloud Architect"></textarea>
+
+        <button type="submit">Get Career Recommendation</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Roadmap</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="roadmap">
+    <h2>Software Developer Roadmap</h2>
+
+    {% for phase in phases %}
+<div class="phase">
+    <h3>{{ phase.title }}</h3>
+    <p>{{ phase.duration }}</p>
+</div>
+{% endfor %}
+
+
+    <div class="phase">
+        <h3>Intermediate (3–6 Months)</h3>
+        <p>Django, Databases, Git</p>
+    </div>
+
+    <div class="phase">
+        <h3>Advanced (6–12 Months)</h3>
+        <p>APIs, Deployment, System Design</p>
+    </div>
+</div>
+
+</body>
+</html>

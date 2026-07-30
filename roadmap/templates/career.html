@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Career Result
+{% endblock %}
+
+{% block content %}
+<section class="result-section">
+    <div class="result-container">
+        <h2>Recommended Career</h2>
+
+        <div class="career-card">
+            <h3>{{ roadmap.career.name }}</h3>
+            <p>{{ roadmap.career.description }}</p>
+
+            <a href="/roadmap/" class="btn">View Career Roadmap</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

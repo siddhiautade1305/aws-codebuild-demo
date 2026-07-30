@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Build Your Smart Career Roadmap</h1>
+        <p>
+            Discover the right career path, required skills, learning resources,
+            and step-by-step guidance tailored just for you.
+        </p>
+        <div class="hero-buttons">
+            <a href="{% url 'career' %}" class="btn primary-btn">Explore Careers</a>
+            <a href="{% url 'register' %}" class="btn secondary-btn">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <h2>Why Choose Smart Career Roadmap?</h2>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>🎯 Career Guidance</h3>
+            <p>
+                Get personalized career suggestions based on your interests,
+                skills, and goals.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🛠 Skill Roadmaps</h3>
+            <p>
+                Step-by-step learning paths with skills, tools, and technologies
+                required for each career.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📚 Learning Resources</h3>
+            <p>
+                Access curated courses, certifications, and free resources to
+                grow faster.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📈 Career Growth</h3>
+            <p>
+                Understand career levels, salaries, and future growth
+                opportunities.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+    <h2>Start Planning Your Career Today</h2>
+    <p>
+        Take control of your future with a smart, structured, and guided career roadmap.
+    </p>
+    <a href="{% url 'register' %}" class="btn primary-btn">Create Your Roadmap</a>
+</section>
+
+{% endblock %}
